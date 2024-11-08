@@ -1,0 +1,14 @@
+.balleari{
+    background-color: deeppink;
+    text-align: center;
+    border-style: solid;
+    border-color: royalblue;
+    border-width: 5px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+.nav-link{
+    font-size: 15px;
+    color: aqua;
+}
