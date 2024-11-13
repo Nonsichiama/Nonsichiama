@@ -12,3 +12,16 @@
     font-size: 15px;
     color: aqua;
 }
+
+.contenitore{
+border-style: solid;
+width: 70px;
+height: 70px;
+position: absolute;
+top: 200px;
+left: 200px;
+}
+
+.simbolo{
+    font-size: 40px;
+}
