@@ -1,28 +1,38 @@
-
-
-let contenitore = document.createElement('div');
+for (const elemento of elementi) {
+    let contenitore = document.createElement('div');
 contenitore.style.borderStyle = 'solid';
-contenitore.style.width = '80px';
-contenitore.style.height = '80px';
+contenitore.style.width = '75px';
+contenitore.style.height = '75px';
 contenitore.style.position = 'absolute';
-contenitore.style.top = '500px';
-contenitore.style.left = '500px';
+contenitore.style.top = 75 * elemento.ypos + 'px';
+contenitore.style.left = 75 * elemento.xpos + 'px';
+contenitore.style.boxSizing = 'border-box';
+contenitore.style.padding = '2px';
+contenitore.style.backgroundColor = '#'+ elemento['cpk-hex'];
 
 let numeroAtomico = document.createElement('span');
-numeroAtomico.innerText = '1';
+numeroAtomico.innerText = elemento.number;
+numeroAtomico.style.display = 'block';
 
 let simbolo = document.createElement('a');
-simbolo.innerText = ('H');
-simbolo.style.fontSize = ('40px')
-simbolo.href = 'https://it.wikipedia.org/wiki/Idrogeno'
+simbolo.innerText = elemento.symbol;
+simbolo.style.fontSize = '25px';
+simbolo.href = elemento.source;
+simbolo.style.display = 'block';
+simbolo.style.textAlign = 'center';
 
 let nomeElemento = document.createElement('span');
-nomeElemento.innerText = 'Idrogeno'
+nomeElemento.innerText = elemento.name;
+nomeElemento.style.display = 'block';
+nomeElemento.style.fontSize = '11px';
+nomeElemento.style.textAlign = 'center';
 
 contenitore.appendChild(numeroAtomico);
 contenitore.appendChild(simbolo);
 contenitore.appendChild(nomeElemento);
 
 let contenutoPrincipale = document.getElementById('contenuto-principale');
-contenutoPrincipale.appendChild(contenitore);
+contenutoPrincipale.style.position = 'relative';
 
+contenutoPrincipale.appendChild(contenitore);
+}
